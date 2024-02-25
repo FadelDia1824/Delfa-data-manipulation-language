@@ -1,0 +1,20 @@
+-- Insérer les enregistrements dans le tableau des produits
+INSERT INTO produits (nom, prix) VALUES ('Cookies', 10), ('Candy', 5.2);
+
+-- Insérer les enregistrements dans le tableau des clients
+INSERT INTO clients (nom, adresse) VALUES ('Ahmed', 'Tunisie'), ('Coulibaly', 'Sénégal'), ('Hasan', 'Egypte');
+
+-- Insérer les enregistrements dans le tableau des commandes
+INSERT INTO commandes (costumerid, productid, quantité, order_date) VALUES (1, 2, 3, '2023-01-22'), (2, 1, 10, '2023-04-14');
+
+-- Mettre à jour la quantité de la deuxième commande
+UPDATE commandes SET quantité = 6 WHERE costumerid = 2 AND productid = 1 AND order_date = '2023-04-14';
+
+-- Supprimer le troisième client de la table clients
+DELETE FROM clients WHERE nom = 'Hasan' AND adresse = 'Egypte';
+
+-- Supprimer le contenu du tableau des commandes
+TRUNCATE TABLE commandes;
+
+-- Supprimer le tableau des commandes
+DROP TABLE commandes;
